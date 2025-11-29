@@ -1,0 +1,16 @@
+[
+    {
+        "id": 2,
+        "amount": 1250.0,
+        "category": "Annen",
+        "date": "2025-11-29 22:12:29",
+        "description": "Test"
+    },
+    {
+        "id": 3,
+        "amount": 2.5,
+        "category": "Transport",
+        "date": "2025-11-29 22:10:41",
+        "description": "Bus Ticket"
+    }
+]
