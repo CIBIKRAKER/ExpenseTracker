@@ -2,8 +2,11 @@ import json
 import datetime
 import os
 import expense
+from rich.console import Console
+from rich.table import Table
 
 class Tracker:
+    
     
 
     def __init__(self):
@@ -86,14 +89,24 @@ class Tracker:
 
         print(f"\nSummary of the expenses: ${summary}")
 
-    def show_expense(self):
+    def show_expenses(self):
+        console = Console()
+
         if(os.path.exists('expenses.json')):
             with open('expenses.json', 'r') as file:
                 self.expenses = json.load(file)
         else:
             self.expenses = []
 
-        for expense in self.expenses:
-            print(f"ID: {expense['id']}, Amount: {expense['amount']}, Category: {expense['category']}, Date: {expense['date']}, Description: {expense['description']}")
-    
+        table = Table()
 
+        table.add_column("ID", justify="right", style="cyan", no_wrap=True)
+        table.add_column("Date", style="green")
+        table.add_column("Description", style="magenta")
+        table.add_column("Amount", justify="right", style="yellow")    
+
+        for exp in self.expenses:
+            date_short = exp['date'].split(" ")[0]  
+            table.add_row(str(exp['id']), date_short, exp['description'], f"${exp['amount']}")
+
+        console.print(table)
