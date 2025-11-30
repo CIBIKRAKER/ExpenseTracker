@@ -1,16 +1,23 @@
 [
     {
+        "id": 1,
+        "amount": 150.0,
+        "category": "food",
+        "date": "2025-9-30 18:50:24",
+        "description": "Groceries"
+    },
+    {
         "id": 2,
-        "amount": 1250.0,
-        "category": "Annen",
-        "date": "2025-11-29 22:12:29",
-        "description": "Test"
+        "amount": 75.0,
+        "category": "clothing",
+        "date": "2025-9-30 18:50:24",
+        "description": "Shoes"
     },
     {
         "id": 3,
-        "amount": 2.5,
-        "category": "Transport",
-        "date": "2025-11-29 22:10:41",
-        "description": "Bus Ticket"
+        "amount": 90.0,
+        "category": "software",
+        "date": "2025-11-30 18:51:13",
+        "description": "Office-365"
     }
 ]
